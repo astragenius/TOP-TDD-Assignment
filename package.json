@@ -1,0 +1,26 @@
+{
+  "name": "top-tdd-assigment",
+  "version": "1.0.0",
+  "description": "The Odin Project - TDD Assigment",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "babel src -d lib"
+  },
+  "author": "matthias",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "jest": "^29.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12"
+  }
+}
