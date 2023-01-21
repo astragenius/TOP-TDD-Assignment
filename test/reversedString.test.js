@@ -11,3 +11,6 @@ test('reverse String Test 2', () => {
 test('reverse String Test 3', () => {
     expect(reverse('Hallo Welt!')).toBe('!tleW ollaH')
 })
+test('reverse String Test 4', () => {
+    expect(reverse('ab')).toBe('ba')
+})
