@@ -31,60 +31,85 @@ describe('Testing the Sum method', () => {
 describe('Test of sub method', () => {
 
     test('throw error when input not a number', () => {
-        expect(calculator.sub('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        expect(calculator.subtract('hallo', 'welt')).toThrow(new Error('Input its not a number'))
     })
     test('if output is a number', () => {
-        expect(calculator.sub(1, 1)).toBe(Number);
+        expect(calculator.subtract(1, 1)).toBe(Number);
     })
     test('sub of 1 - 1', () => {
-        expect(calculator.sub(1, 1)).toBe(0)
+        expect(calculator.subtract(1, 1)).toBe(0)
     })
     test('sub of 23 - 10', () => {
-        expect(calculator.sub(23, 10)).toBe(13)
+        expect(calculator.subtract(23, 10)).toBe(13)
     })
     test('sub of floating number', () => {
-        expect(calculator.sub(40.23, 20.21)).toBe(20.02)
+        expect(calculator.subtract(40.23, 20.21)).toBe(20.02)
     })
     test('sub of negative numbers', () => {
-        expect(calculator.sub(-10, -5)).toBe(-5)
+        expect(calculator.subtract(-10, -5)).toBe(-5)
     })
     test('sub of 1 string number as argument', () => {
-        expect(calculator.sub('10', 5)).toBe(5)
+        expect(calculator.subtract('10', 5)).toBe(5)
     })
     test('sub of 2 string number as argument', () => {
-        expect(calculator.sub('20', '10')).toBe(10)
+        expect(calculator.subtract('20', '10')).toBe(10)
     })
 
     
 })
 describe('Test of divide method', () => {
     test('throw error when input not a number', () => {
-        expect(calculator.div('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        expect(calculator.divide('hallo', 'welt')).toThrow(new Error('Input its not a number'))
     })
     test('thorw error when divide by zero', () => {
-        expect(calculator.div(5, 0)).toThrow(new Error('Its not allowed to divide by zero'))
+        expect(calculator.divide(5, 0)).toThrow(new Error('Its not allowed to divide by zero'))
     })
     test('if output is a number', () => {
-        expect(calculator.div(1, 1)).toBe(Number);
+        expect(calculator.divide(1, 1)).toBe(Number);
     })
     test('div of 20 / 5', () => {
-        expect(calculator.div(20, 5)).toBe(4)
+        expect(calculator.divide(20, 5)).toBe(4)
     })
     test('divide floating numbers', () => {
-        expect(calculator.div(44.23, 12.45)).toBe(3.55)
+        expect(calculator.divide(44.23, 12.45)).toBe(3.55)
     })
     test('divide negative numbers', () => {
-        expect(calculator.div(-10, -5)).toBe(2)
+        expect(calculator.divide(-10, -5)).toBe(2)
     })
     test('divide of 1 string number as argument', () => {
-        expect(calculator.div('10', 5)).toBe(2)
+        expect(calculator.divide('10', 5)).toBe(2)
     })
     test('divide of 2 string number as argument', () => {
-        expect(calculator.div('20', '10')).toBe(2)
+        expect(calculator.divide('20', '10')).toBe(2)
     })
 
 
 
+})
+describe('Test of multiply method', () => {
+    test('throw error when input not a number', () => {
+        expect(calculator.multiply('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+    })
+    
+    test('if output is a number', () => {
+        expect(calculator.multiply(1, 1)).toBe(Number);
+    })
+    test('multiply of 20 and 5', () => {
+        expect(calculator.multiply(20, 5)).toBe(100)
+    })
+    test('multiply floating numbers', () => {
+        expect(calculator.multiply(44.23, 12.45)).toBe(550.66)
+    })
+    test('multiply negative numbers', () => {
+        expect(calculator.multiply(-10, -5)).toBe(50)
+    })
+    test('multiply of 1 string number as argument', () => {
+        expect(calculator.multiply('10', 5)).toBe(50)
+    })
+    test('multiply of 2 string number as argument', () => {
+        expect(calculator.multiply('20', '10')).toBe(200)
+    })
+    
 })
     
     
