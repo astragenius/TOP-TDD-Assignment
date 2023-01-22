@@ -9,9 +9,6 @@ class calculator {
         let nr = Number(a) + Number(b);
         return Number(nr.toFixed(2))
 
-        
-
-
     }
     static subtract(a, b) {
         if(isNaN(a) || isNaN(b)) {
@@ -19,10 +16,9 @@ class calculator {
         }
 
         let nr = Number(a) - Number(b);
-        return Number(nr.toFixed(2))
+       return Number(nr.toFixed(2))
        
     }
-
 
 
     static divide(a, b) {
@@ -35,7 +31,6 @@ class calculator {
         let nr = Number(a) / Number(b);
         return Number(nr.toFixed(2))
     }
-
 
     static multiply(a, b) {
         if(isNaN(a) || isNaN(b)) {
