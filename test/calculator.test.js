@@ -3,11 +3,12 @@ const calculator = require('../code/calculator');
 describe('Testing the Sum method', () => {
 
     test('throw error when input not a number', () => {
-        expect(calculator.sum('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        function errorTest() {
+            calculator.sum('hello', 'world')
+        }
+        expect(errorTest).toThrow('Input its not a number')
     })
-    test('if its a number', () => {
-        expect(calculator.sum(1, 1)).toBe(Number)
-    })
+    
     test('sum of 1 + 1', () => {
         expect(calculator.sum(1, 1)).toBe(2)
     })
@@ -30,12 +31,14 @@ describe('Testing the Sum method', () => {
 })
 describe('Test of sub method', () => {
 
+    
     test('throw error when input not a number', () => {
-        expect(calculator.subtract('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        function errorTest() {
+            calculator.subtract('hello', 'world')
+        }
+        expect(errorTest).toThrow('Input its not a number')
     })
-    test('if output is a number', () => {
-        expect(calculator.subtract(1, 1)).toBe(Number);
-    })
+    
     test('sub of 1 - 1', () => {
         expect(calculator.subtract(1, 1)).toBe(0)
     })
@@ -59,14 +62,18 @@ describe('Test of sub method', () => {
 })
 describe('Test of divide method', () => {
     test('throw error when input not a number', () => {
-        expect(calculator.divide('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        function errorTest() {
+            calculator.divide('hello', 'world')
+        }
+        expect(errorTest).toThrow('Input its not a number')
     })
     test('thorw error when divide by zero', () => {
-        expect(calculator.divide(5, 0)).toThrow(new Error('Its not allowed to divide by zero'))
+        function errorTest() {
+            calculator.divide(5, 0)
+        }
+        expect(errorTest).toThrow('Its not allowed to divide by zero')
     })
-    test('if output is a number', () => {
-        expect(calculator.divide(1, 1)).toBe(Number);
-    })
+   
     test('div of 20 / 5', () => {
         expect(calculator.divide(20, 5)).toBe(4)
     })
@@ -88,12 +95,12 @@ describe('Test of divide method', () => {
 })
 describe('Test of multiply method', () => {
     test('throw error when input not a number', () => {
-        expect(calculator.multiply('hallo', 'welt')).toThrow(new Error('Input its not a number'))
+        function errorTest() {
+            calculator.multiply('hello', 'world')
+        }
+        expect(errorTest).toThrow('Input its not a number')
     })
     
-    test('if output is a number', () => {
-        expect(calculator.multiply(1, 1)).toBe(Number);
-    })
     test('multiply of 20 and 5', () => {
         expect(calculator.multiply(20, 5)).toBe(100)
     })
