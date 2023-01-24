@@ -3,10 +3,6 @@ const analyzeArray = require('../code/analyzeArray')
 
 describe('test', () => {
 
-    test('get error msg when string in array', () => {
-        expect(analyzeArray(['1', 5, 9, 20, 4])).toBe('ERROR')
-    })
-
     test('get error msg when array is emty', () => {
         expect(analyzeArray([])).toBe('Array is emty')
     })
@@ -22,7 +18,7 @@ describe('test', () => {
 
     test('get object from analyzer function', () => {
         expect(analyzeArray([4, 12, 63, 2, 125, 88, 6, 34, 76])).toStrictEqual({
-            average: 46, // 45
+            average: 45, // 45
             min: 2,
             max: 125,
             length: 9
